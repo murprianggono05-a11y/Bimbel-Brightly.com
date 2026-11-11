@@ -1,0 +1,280 @@
+/* Reset CSS & Variabel Warna */
+:root {
+    --primary-blue: #004aad;
+    --accent-yellow: #ffbd59;
+    --dark-text: #2c3e50;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    color: var(--dark-text);
+    line-height: 1.6;
+    background-color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navigasi / Navbar */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent-yellow);
+    background-color: var(--primary-blue);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-menu li {
+    margin-left: 1.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--primary-blue);
+}
+
+.btn-nav {
+    background-color: var(--accent-yellow);
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--dark-text) !important;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue), #002d6b);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--accent-yellow);
+    color: var(--dark-text);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+/* Page Header (About Page) */
+.page-header {
+    background-color: var(--light-bg);
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.page-header h1 {
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+/* Section Grid & Card */
+.features, .program, .about-detail {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-blue);
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+.card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--accent-yellow);
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.program-card {
+    border-top: 4px solid var(--primary-blue);
+}
+
+.program-card .subtitle {
+    color: var(--primary-blue);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.program-card ul {
+    padding-left: 20px;
+}
+
+.vision-mision {
+    margin-top: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: #1a252f;
+    color: var(--white);
+    padding-top: 40px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-content h3, .footer-content h4 {
+    color: var(--accent-yellow);
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    background-color: #111820;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* Responsif (Mobile View) */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--white);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .grid-2, .grid-3, .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
